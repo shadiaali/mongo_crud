@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title><%= title %></title>
+</head>
+
+<body>
+
+
+    <div class="container-fluid mask cloudy-knoxville-gradient d-flex justify-content-center align-items-center">
+
+        <!-- Content -->
+        <div class="pt-5 pb-5 px-md-3 px-sm-0">
+
+            <!--Grid row-->
+            <div class="row">
+
+                <!--Grid column-->
+                <div class="col-md-12 mb-4">
+
+
+                    <span class="subtext-header mt-2 mb-4 text-left">
+                        <ul>
+
+
+                            <% for(var i = 0; i < users.length; i++) { %>
+
+                            <li><%= users[i].fname  %>
+                                <li />
+
+                                <% } %>
+                        </ul>
+                    </span>
+
+
+                    <h3>Add user</h3>
+                    <form method="post" action="http://localhost:3000/users/new">
+
+                        <label for="fname">first name</label>
+                        <input type="text" name="fname" id="fname">
+
+                        <label for="lname">last name</label>
+                        <input type="text" name="lname" id="lname">
+
+                        <label for="number">age</label>
+                        <input type="text" name="age" id="age">
+
+                        <label for="email">email</label>
+                        <input type="email" name="email" id="email">
+
+                        <label for="password">password</label>
+                        <input type="password" name="password" id="password">
+
+                        <input type="submit" value="add">
+
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
